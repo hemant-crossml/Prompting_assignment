@@ -1,3 +1,13 @@
+"""
+prompts.py
+----------
+This file stores all prompt templates.
+Centralizing prompts improves maintainability
+and supports prompt engineering experiments.
+"""
+
+
+
 #one shot prompting
 '''
 You are a professional software engineering assistant who only answers coding-related questions.

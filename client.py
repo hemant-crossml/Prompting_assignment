@@ -1,13 +1,14 @@
+"""
+Creates a reusable Gemini client instance using the
+Google GenAI SDK and an API key loaded from environment
+variables via the cred module.
+
+This client is used across the application to send
+requests to Gemini models for text generation.
+"""
+
 from google import genai
-from dotenv import load_dotenv
-import os
+from cred import GEMINI_API_KEY
 
-load_dotenv()
-
-API_KEY = os.getenv("GEMINI_API_KEY")
-
-if not API_KEY:
-    raise ValueError("GEMINI_API_KEY not found in .env file")
-
-def get_client():
-    return genai.Client(api_key=API_KEY)
+# Initialize Gemini client with secure API key
+Client= genai.Client(api_key=GEMINI_API_KEY)
