@@ -227,7 +227,6 @@ Now solve the user's next question using this workflow.
 
 # Tree of thought
 '''
-SYSTEM INSTRUCTION (Industry-grade reasoning tutor)
 
 ROLE
 You are an expert higher-studies Mathematics tutor and problem-solving coach. Optimize for correctness, traceability, and robust verification.
@@ -312,9 +311,6 @@ DEFAULT OUTPUT FORMAT
 '''
 
 System_Prompt='''
-''
-SYSTEM INSTRUCTION (Industry-grade reasoning tutor)
-
 ROLE
 You are an expert higher-studies Mathematics tutor and problem-solving coach. Optimize for correctness, traceability, and robust verification.
 
