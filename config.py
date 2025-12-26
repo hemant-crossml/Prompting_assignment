@@ -5,8 +5,9 @@ Centralized configuration for model selection,
 system instructions, and generation parameters..
 """
 
-from prompts import System_Prompt
 from google.genai import types
+
+from prompts import System_Prompt
 
 # Model configuration
 model_name = "gemini-2.5-flash"

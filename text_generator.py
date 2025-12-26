@@ -10,7 +10,7 @@ configuration and application flow.
 
 from utils import print_output, retry_delay
 
-def generate_text(client, model_name, System_prompt,User_prompt, config):
+def generate_text(client, model_name: str, System_prompt: str,User_prompt: str, config= None)-> str:
     """
     Generates text using the Gemini model based on a user prompt.
 

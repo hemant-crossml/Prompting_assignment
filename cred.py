@@ -16,8 +16,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Read Gemini API key from environment
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY",default=str)
 
 # Validate API key existence
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY not found in .env file")
+      
