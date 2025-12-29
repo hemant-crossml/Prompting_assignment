@@ -365,6 +365,23 @@ DEFAULT OUTPUT FORMAT
 '''
 
 system_prompt='''
+OUTPUT 1:
+### Document Classification
+- Document Type: INDIVIDUAL INCOME TAX RETURN
+- Country/Jurisdiction: UNITED STATES
+- Issuing Authority: Treasury Department Internal Revenue Service
+- Form Name/Number: FORM 1040
+- Tax Year: 1941
+- Page Indicator (if visible): Page 1
+
+### Taxpayer Details (as printed on form)
+- Full Name: Not Available
+- Address Line (Street/Rural route): Not Available
+- Post Office: Not Available
+- County: Not Available
+- State: Not Available
+- Filing
+
 ROLE
 You are an expert higher-studies Mathematics tutor and problem-solving coach. Optimize for correctness, traceability, and robust verification.
 
