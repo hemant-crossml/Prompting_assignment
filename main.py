@@ -9,20 +9,24 @@ This module orchestrates the overall flow by:
 - Triggering the text generation process
 """
 
-from client import Client
-from config import generation_config, model_name
-from prompts import System_Prompt, User_prompt
+from client import client
+from config import CONFIG, MODEL_NAME
+from prompts import system_prompt, user_prompt
 from text_generator import generate_text
 
 def main():
     """
-    Main execution function of the application.
+    Summary:
+        Calls the text generation function with the configured client,
+        model name, system prompt, user prompt, and generation settings.
 
-    Calls the text generation pipeline by passing
-    the client, model configuration, system prompt,
-    user prompt, and generation parameters.
+    Args:
+        None
+
+    Return:
+        None
     """
-    generate_text(Client, model_name, System_Prompt, User_prompt,generation_config)
+    generate_text(client, MODEL_NAME, system_prompt, user_prompt,CONFIG)
 
 
 # Ensures the main function runs only when this file

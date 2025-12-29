@@ -7,12 +7,17 @@ the Gemini model to generate text responses.
 This module separates the text generation logic from
 configuration and application flow.
 """
+from typing import Optional
 
 from utils import print_output, retry_delay
 
-def generate_text(client, model_name: str, System_prompt: str,User_prompt: str, config= None)-> str:
+def generate_text(client, model_name: str, system_prompt: str,user_prompt: str, config: Optional[dict] = None):
     """
-    Generates text using the Gemini model based on a user prompt.
+    Summary:
+    This module provides a robust text generation function for LMM Gemini AI processing.
+    It handles text  (Google GenAI Part), sends them to the specified model with configuration,
+    prints formatted output using utilities, and implements error handling with retry delays for reliable API interactions.
+   
 
     Args:
         client: Initialized Gemini client instance.
@@ -30,11 +35,11 @@ def generate_text(client, model_name: str, System_prompt: str,User_prompt: str, 
         # Send the user prompt to the Gemini model for text generation
         response = client.models.generate_content(
             model=model_name,  
-            contents=User_prompt,
+            contents=user_prompt,
             config=config
         )
         # Print formatted output including prompts and model response
-        print_output(System_prompt,User_prompt, response.text)
+        print_output(system_prompt,user_prompt, response.text)
 
     except Exception as e:
         # Handle runtime or API-related errors gracefully

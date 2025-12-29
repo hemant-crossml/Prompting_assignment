@@ -1,15 +1,9 @@
 """
-Summary:
-    Imports the Google GenAI SDK and initializes a Gemini client using an API key
-    stored in a separate credentials module.
+Gemini Client Initialization Module
 
-Args:
-    GEMINI_API_KEY (str): Gemini API key imported from `cred`. This key is used to
-        authenticate requests made through the GenAI client.
-
-Returns:
-    genai.Client: An initialized Gemini client instance authenticated with the
-    provided API key.
+This module initializes the Google Gemini client using a securely stored
+API key imported from the credentials file. The client object can be reused
+across the application to make requests to the Gemini API.
 """
 
 from google import genai
@@ -17,4 +11,4 @@ from google import genai
 from cred import GEMINI_API_KEY
 
 # Initialize Gemini client with secure API key
-Client= genai.Client(api_key=GEMINI_API_KEY)
+client= genai.Client(api_key=GEMINI_API_KEY)

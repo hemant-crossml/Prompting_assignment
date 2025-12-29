@@ -7,16 +7,16 @@ system instructions, and generation parameters..
 
 from google.genai import types
 
-from prompts import System_Prompt
+from prompts import system_prompt
 
 # Model configuration
-model_name = "gemini-2.5-flash"
+MODEL_NAME= "gemini-2.5-flash"
 
 # Generation configuration with system instruction
-generation_config = types.GenerateContentConfig(
-    system_instruction= System_Prompt,
+CONFIG = types.GenerateContentConfig(
+    system_instruction= system_prompt,
     temperature=0.2,
     top_p=0.5,
     top_k=10,
-    max_output_tokens=3000
+    max_output_tokens=5000
 )

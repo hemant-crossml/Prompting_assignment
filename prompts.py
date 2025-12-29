@@ -364,7 +364,7 @@ DEFAULT OUTPUT FORMAT
 
 '''
 
-System_Prompt='''
+system_prompt='''
 ROLE
 You are an expert higher-studies Mathematics tutor and problem-solving coach. Optimize for correctness, traceability, and robust verification.
 
@@ -448,7 +448,7 @@ DEFAULT OUTPUT FORMAT
 '''
 
 
-User_prompt="""Solve the system:
+user_prompt="""Solve the system:
 2x +  y - z =  8
 -3x - y + 2z = -11
 -2x + y + 2z = -3
