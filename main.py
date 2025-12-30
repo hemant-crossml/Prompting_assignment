@@ -26,7 +26,7 @@ def main():
     Return:
         None
     """
-    generate_text(client, MODEL_NAME, system_prompt, user_prompt,CONFIG)
+    generate_text(client, MODEL_NAME, system_prompt, user_prompt,CONFIG, True)
 
 
 # Ensures the main function runs only when this file
